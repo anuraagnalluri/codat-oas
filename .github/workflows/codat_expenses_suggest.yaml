@@ -11,7 +11,7 @@ jobs:
       openapi_docs: |
         - ./yaml/Codat-Expenses.yaml
       openapi_doc_output: ./yaml/Codat-Expenses.yaml
-      max_suggestions: 1
+      max_suggestions: 5
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
