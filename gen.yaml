@@ -1,0 +1,17 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  flattenGlobalSecurity: true
+  sdkClassName: speakeasybar
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+  telemetryEnabled: false
+go:
+  version: 0.0.1
+  clientServerStatusCodesAsErrors: true
+  flattenGlobalSecurity: true
+  maxMethodParams: 4
+  packageName: github.com/anuraagnalluri/codat-oas
