@@ -48,4 +48,4 @@ typescript:
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   maxMethodParams: 4
-  packageName: anothertest
+  packageName: test
