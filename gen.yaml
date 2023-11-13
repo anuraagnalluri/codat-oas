@@ -44,8 +44,8 @@ ruby:
   packageName: test
 typescript:
   version: 0.0.1
-  author: newfreemium
+  author: freemium
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   maxMethodParams: 4
-  packageName: test
+  packageName: anothertest
