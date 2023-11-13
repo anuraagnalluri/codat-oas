@@ -21,7 +21,7 @@ jobs:
       mode: direct
       openapi_doc_auth_header: x-api-key
       openapi_docs: |
-        - https://staging.speakeasyapi.dev/v1/apis/freemium-test/version/2.0.0/schema/download
+        - https://staging.speakeasyapi.dev/v1/apis/providedtest/version/v1.0.0/schema/download
       speakeasy_server_url: https://staging.speakeasyapi.dev
       speakeasy_version: latest
     secrets:
