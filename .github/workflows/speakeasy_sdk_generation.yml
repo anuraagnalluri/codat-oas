@@ -17,7 +17,7 @@ jobs:
     with:
       force: ${{ github.event.inputs.force }}
       languages: |
-        - go
+        - python
       mode: direct
       openapi_doc_auth_header: x-api-key
       openapi_docs: |
