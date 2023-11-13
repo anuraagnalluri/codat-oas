@@ -1,21 +1,42 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 09467363775cd29b9b6f87710c2a5d57
+  docVersion: 1.0.0
+  speakeasyVersion: 1.119.1
+  generationVersion: 2.188.3
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
+  comments: {}
+  sdkClassName: freemium-test
+  repoURL: https://github.com/anuraagnalluri/codat-oas.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
   baseServerURL: ""
   flattenGlobalSecurity: true
-  repoURL: https://github.com/speakeasy-sdks/template-speakeasy-bar.git
-  sdkClassName: freemium-test
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
   telemetryEnabled: false
+features:
+  go:
+    core: 3.1.4
+    flattening: 2.81.1
+    globalServerURLs: 2.82.0
 go:
-  version: 0.0.1
+  version: 0.1.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/sdkerrors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
+  inputModelSuffix: input
+  installationURL: https://github.com/anuraagnalluri/codat-oas
   maxMethodParams: 4
+  outputModelSuffix: output
   packageName: github.com/anuraagnalluri/codat-oas
+  published: true
+  repoSubDirectory: .
 java:
   version: 0.0.1
   artifactID: test
