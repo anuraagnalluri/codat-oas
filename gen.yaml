@@ -6,7 +6,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
   repoURL: https://github.com/speakeasy-sdks/template-speakeasy-bar.git
-  sdkClassName: anothertest
+  sdkClassName: test
   singleTagPerOp: false
   tagNamespacingDisabled: false
   telemetryEnabled: false
