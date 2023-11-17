@@ -1,4 +1,4 @@
-# FreemiumTest SDK
+# Test SDK
 
 
 ## Overview

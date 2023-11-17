@@ -48,15 +48,19 @@ package main
 
 import (
 	"context"
+	"errors"
 	codatoas "github.com/anuraagnalluri/codat-oas"
+	"github.com/anuraagnalluri/codat-oas/models/sdkerrors"
 	"log"
 )
 
 func main() {
 	s := codatoas.New()
 
+	var limit *int = 21453
+
 	ctx := context.Background()
-	res, err := s.Pets.CreatePets(ctx)
+	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
 
 		var e *sdkerrors.SDKError
@@ -68,7 +72,6 @@ func main() {
 }
 
 ```
-
 <!-- End Error Handling -->
 
 
@@ -100,13 +103,15 @@ func main() {
 		codatoas.WithServerIndex(0),
 	)
 
+	var limit *int = 21453
+
 	ctx := context.Background()
-	res, err := s.Pets.CreatePets(ctx)
+	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.StatusCode == http.StatusOK {
+	if res.Pets != nil {
 		// handle response
 	}
 }
@@ -131,13 +136,15 @@ func main() {
 		codatoas.WithServerURL("http://petstore.swagger.io/v1"),
 	)
 
+	var limit *int = 21453
+
 	ctx := context.Background()
-	res, err := s.Pets.CreatePets(ctx)
+	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.StatusCode == http.StatusOK {
+	if res.Pets != nil {
 		// handle response
 	}
 }

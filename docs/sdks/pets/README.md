@@ -7,53 +7,9 @@ CRUD pet resource.
 
 ### Available Operations
 
-* [CreatePets](#createpets) - Create a pet
 * [ListPets](#listpets) - List all pets
+* [CreatePets](#createpets) - Create a pet
 * [ShowPetByID](#showpetbyid) - Info for a specific pet
-
-## CreatePets
-
-Create a pet
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	codatoas "github.com/anuraagnalluri/codat-oas"
-)
-
-func main() {
-    s := codatoas.New()
-
-    ctx := context.Background()
-    res, err := s.Pets.CreatePets(ctx)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.StatusCode == http.StatusOK {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                             | Type                                                  | Required                                              | Description                                           |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
-
-
-### Response
-
-**[*operations.CreatePetsResponse](../../models/operations/createpetsresponse.md), error**
-| Error Object       | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
 
 ## ListPets
 
@@ -65,9 +21,9 @@ List all pets
 package main
 
 import(
+	codatoas "github.com/anuraagnalluri/codat-oas"
 	"context"
 	"log"
-	codatoas "github.com/anuraagnalluri/codat-oas"
 )
 
 func main() {
@@ -103,6 +59,51 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
 
+## CreatePets
+
+Create a pet
+
+### Example Usage
+
+```go
+package main
+
+import(
+	codatoas "github.com/anuraagnalluri/codat-oas"
+	"context"
+	"log"
+	"net/http"
+)
+
+func main() {
+    s := codatoas.New()
+
+    ctx := context.Background()
+    res, err := s.Pets.CreatePets(ctx)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+
+
+### Response
+
+**[*operations.CreatePetsResponse](../../models/operations/createpetsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
 ## ShowPetByID
 
 Info for a specific pet
@@ -113,9 +114,9 @@ Info for a specific pet
 package main
 
 import(
+	codatoas "github.com/anuraagnalluri/codat-oas"
 	"context"
 	"log"
-	codatoas "github.com/anuraagnalluri/codat-oas"
 )
 
 func main() {

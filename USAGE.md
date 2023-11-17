@@ -11,13 +11,15 @@ import (
 func main() {
 	s := codatoas.New()
 
+	var limit *int = 21453
+
 	ctx := context.Background()
-	res, err := s.Pets.CreatePets(ctx)
+	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.StatusCode == http.StatusOK {
+	if res.Pets != nil {
 		// handle response
 	}
 }

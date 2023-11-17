@@ -22,14 +22,12 @@ func (o *ShowPetByIDRequest) GetPetID() string {
 type ShowPetByIDResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
-	// unexpected error
-	Error *components.Error
-	// Expected response to a valid request
-	Pet *components.Pet
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	// Expected response to a valid request
+	Pet *components.Pet
 }
 
 func (o *ShowPetByIDResponse) GetContentType() string {
@@ -37,20 +35,6 @@ func (o *ShowPetByIDResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *ShowPetByIDResponse) GetError() *components.Error {
-	if o == nil {
-		return nil
-	}
-	return o.Error
-}
-
-func (o *ShowPetByIDResponse) GetPet() *components.Pet {
-	if o == nil {
-		return nil
-	}
-	return o.Pet
 }
 
 func (o *ShowPetByIDResponse) GetStatusCode() int {
@@ -65,4 +49,11 @@ func (o *ShowPetByIDResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *ShowPetByIDResponse) GetPet() *components.Pet {
+	if o == nil {
+		return nil
+	}
+	return o.Pet
 }

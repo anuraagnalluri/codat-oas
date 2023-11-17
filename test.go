@@ -59,25 +59,25 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 	return ServerList[c.ServerIndex], nil
 }
 
-type FreemiumTest struct {
+type Test struct {
 	// CRUD pet resource.
 	Pets *Pets
 
 	sdkConfiguration sdkConfiguration
 }
 
-type SDKOption func(*FreemiumTest)
+type SDKOption func(*Test)
 
 // WithServerURL allows the overriding of the default server URL
 func WithServerURL(serverURL string) SDKOption {
-	return func(sdk *FreemiumTest) {
+	return func(sdk *Test) {
 		sdk.sdkConfiguration.ServerURL = serverURL
 	}
 }
 
 // WithTemplatedServerURL allows the overriding of the default server URL with a templated URL populated with the provided parameters
 func WithTemplatedServerURL(serverURL string, params map[string]string) SDKOption {
-	return func(sdk *FreemiumTest) {
+	return func(sdk *Test) {
 		if params != nil {
 			serverURL = utils.ReplaceParameters(serverURL, params)
 		}
@@ -88,7 +88,7 @@ func WithTemplatedServerURL(serverURL string, params map[string]string) SDKOptio
 
 // WithServerIndex allows the overriding of the default server by index
 func WithServerIndex(serverIndex int) SDKOption {
-	return func(sdk *FreemiumTest) {
+	return func(sdk *Test) {
 		if serverIndex < 0 || serverIndex >= len(ServerList) {
 			panic(fmt.Errorf("server index %d out of range", serverIndex))
 		}
@@ -99,26 +99,26 @@ func WithServerIndex(serverIndex int) SDKOption {
 
 // WithClient allows the overriding of the default HTTP client used by the SDK
 func WithClient(client HTTPClient) SDKOption {
-	return func(sdk *FreemiumTest) {
+	return func(sdk *Test) {
 		sdk.sdkConfiguration.DefaultClient = client
 	}
 }
 
 func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
-	return func(sdk *FreemiumTest) {
+	return func(sdk *Test) {
 		sdk.sdkConfiguration.RetryConfig = &retryConfig
 	}
 }
 
 // New creates a new instance of the SDK with the provided options
-func New(opts ...SDKOption) *FreemiumTest {
-	sdk := &FreemiumTest{
+func New(opts ...SDKOption) *Test {
+	sdk := &Test{
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.1.0",
-			GenVersion:        "2.188.3",
-			UserAgent:         "speakeasy-sdk/go 0.1.0 2.188.3 1.0.0 github.com/anuraagnalluri/codat-oas",
+			SDKVersion:        "0.1.1",
+			GenVersion:        "2.194.1",
+			UserAgent:         "speakeasy-sdk/go 0.1.1 2.194.1 1.0.0 github.com/anuraagnalluri/codat-oas",
 		},
 	}
 	for _, opt := range opts {

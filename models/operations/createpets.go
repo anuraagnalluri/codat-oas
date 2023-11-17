@@ -3,15 +3,12 @@
 package operations
 
 import (
-	"github.com/anuraagnalluri/codat-oas/models/components"
 	"net/http"
 )
 
 type CreatePetsResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
-	// unexpected error
-	Error *components.Error
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -23,13 +20,6 @@ func (o *CreatePetsResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *CreatePetsResponse) GetError() *components.Error {
-	if o == nil {
-		return nil
-	}
-	return o.Error
 }
 
 func (o *CreatePetsResponse) GetStatusCode() int {

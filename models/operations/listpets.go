@@ -22,15 +22,13 @@ func (o *ListPetsRequest) GetLimit() *int {
 type ListPetsResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
-	// unexpected error
-	Error   *components.Error
-	Headers map[string][]string
-	// A paged array of pets
-	Pets []components.Pet
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	// A paged array of pets
+	Pets    []components.Pet
+	Headers map[string][]string
 }
 
 func (o *ListPetsResponse) GetContentType() string {
@@ -38,27 +36,6 @@ func (o *ListPetsResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
-}
-
-func (o *ListPetsResponse) GetError() *components.Error {
-	if o == nil {
-		return nil
-	}
-	return o.Error
-}
-
-func (o *ListPetsResponse) GetHeaders() map[string][]string {
-	if o == nil {
-		return nil
-	}
-	return o.Headers
-}
-
-func (o *ListPetsResponse) GetPets() []components.Pet {
-	if o == nil {
-		return nil
-	}
-	return o.Pets
 }
 
 func (o *ListPetsResponse) GetStatusCode() int {
@@ -73,4 +50,18 @@ func (o *ListPetsResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *ListPetsResponse) GetPets() []components.Pet {
+	if o == nil {
+		return nil
+	}
+	return o.Pets
+}
+
+func (o *ListPetsResponse) GetHeaders() map[string][]string {
+	if o == nil {
+		return map[string][]string{}
+	}
+	return o.Headers
 }

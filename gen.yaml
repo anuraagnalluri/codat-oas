@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 09467363775cd29b9b6f87710c2a5d57
   docVersion: 1.0.0
-  speakeasyVersion: 1.119.1
-  generationVersion: 2.188.3
+  speakeasyVersion: 1.121.1
+  generationVersion: 2.194.1
 generation:
   comments: {}
   sdkClassName: test
@@ -16,11 +16,11 @@ generation:
   telemetryEnabled: false
 features:
   go:
-    core: 3.1.4
+    core: 3.1.5
     flattening: 2.81.1
-    globalServerURLs: 2.82.0
+    globalServerURLs: 2.82.1
 go:
-  version: 0.1.0
+  version: 0.1.1
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
@@ -32,9 +32,12 @@ go:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
+  installationURL: https://github.com/anuraagnalluri/codat-oas
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: github.com/anuraagnalluri/codat-oas
+  published: true
+  repoSubDirectory: .
 java:
   version: 0.0.1
   artifactID: test
