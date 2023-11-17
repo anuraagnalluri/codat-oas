@@ -5,18 +5,15 @@ management:
   speakeasyVersion: 1.119.1
   generationVersion: 2.188.3
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
+  comments: {}
+  sdkClassName: test
   repoURL: https://github.com/anuraagnalluri/codat-oas.git
-  sdkClassName: providedtest
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
-  telemetryEnabled: false
+  maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
+  baseServerURL: ""
+  flattenGlobalSecurity: true
+  telemetryEnabled: false
 features:
   go:
     core: 3.1.4
@@ -26,7 +23,17 @@ go:
   version: 0.1.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/sdkerrors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
+  inputModelSuffix: input
   maxMethodParams: 4
+  outputModelSuffix: output
   packageName: github.com/anuraagnalluri/codat-oas
 java:
   version: 0.0.1
