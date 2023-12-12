@@ -3,6 +3,7 @@
 package operations
 
 import (
+	"github.com/anuraagnalluri/codat-oas/models/components"
 	"net/http"
 )
 
@@ -13,6 +14,8 @@ type CreatePetsResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+	// unexpected error
+	Error *components.Error
 }
 
 func (o *CreatePetsResponse) GetContentType() string {
@@ -34,4 +37,11 @@ func (o *CreatePetsResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *CreatePetsResponse) GetError() *components.Error {
+	if o == nil {
+		return nil
+	}
+	return o.Error
 }

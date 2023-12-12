@@ -27,7 +27,9 @@ type ListPetsResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// A paged array of pets
-	Pets    []components.Pet
+	Pets []components.Pet
+	// unexpected error
+	Error   *components.Error
 	Headers map[string][]string
 }
 
@@ -57,6 +59,13 @@ func (o *ListPetsResponse) GetPets() []components.Pet {
 		return nil
 	}
 	return o.Pets
+}
+
+func (o *ListPetsResponse) GetError() *components.Error {
+	if o == nil {
+		return nil
+	}
+	return o.Error
 }
 
 func (o *ListPetsResponse) GetHeaders() map[string][]string {

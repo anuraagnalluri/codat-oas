@@ -28,6 +28,8 @@ type ShowPetByIDResponse struct {
 	RawResponse *http.Response
 	// Expected response to a valid request
 	Pet *components.Pet
+	// unexpected error
+	Error *components.Error
 }
 
 func (o *ShowPetByIDResponse) GetContentType() string {
@@ -56,4 +58,11 @@ func (o *ShowPetByIDResponse) GetPet() *components.Pet {
 		return nil
 	}
 	return o.Pet
+}
+
+func (o *ShowPetByIDResponse) GetError() *components.Error {
+	if o == nil {
+		return nil
+	}
+	return o.Error
 }

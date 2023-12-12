@@ -22,14 +22,14 @@ internal/utils/utils.go
 /models/operations/listpets.go
 /models/operations/createpets.go
 /models/operations/showpetbyid.go
+/models/components/error.go
 /models/components/pet.go
-USAGE.md
 docs/models/operations/listpetsrequest.md
 docs/models/operations/listpetsresponse.md
 docs/models/operations/createpetsresponse.md
 docs/models/operations/showpetbyidrequest.md
 docs/models/operations/showpetbyidresponse.md
+docs/models/components/error.md
 docs/models/components/pet.md
-docs/sdks/test/README.md
-docs/sdks/pets/README.md
+USAGE.md
 .gitattributes
