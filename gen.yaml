@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 09467363775cd29b9b6f87710c2a5d57
   docVersion: 1.0.0
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+  speakeasyVersion: 1.127.0
+  generationVersion: 2.220.0
 generation:
   comments: {}
   sdkClassName: test
@@ -12,15 +12,17 @@ generation:
   usageSnippets:
     optionalPropertyRendering: withExample
   baseServerURL: ""
+  fixes:
+    nameResolutionDec2023: false
   flattenGlobalSecurity: true
   telemetryEnabled: false
 features:
   go:
-    core: 3.2.0
+    core: 3.2.2
     flattening: 2.81.1
     globalServerURLs: 2.82.1
 go:
-  version: 0.2.0
+  version: 0.2.1
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
