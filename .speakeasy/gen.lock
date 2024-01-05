@@ -1,0 +1,54 @@
+lockVersion: 2.0.0
+id: 3bcbe03c-bc65-49ca-8c8d-02e32a18f282
+management:
+  docChecksum: 09467363775cd29b9b6f87710c2a5d57
+  docVersion: 1.0.0
+  speakeasyVersion: internal
+  generationVersion: 2.225.2
+  releaseVersion: 0.2.1
+  configChecksum: 24cca1fff92223c59c9989a2c350c638
+  repoURL: https://github.com/anuraagnalluri/codat-oas.git
+  repoSubDirectory: .
+  installationURL: https://github.com/anuraagnalluri/codat-oas
+  published: true
+features:
+  go:
+    core: 3.3.0
+    flattening: 2.81.1
+    globalServerURLs: 2.82.1
+generatedFiles:
+  - pets.go
+  - test.go
+  - go.mod
+  - go.sum
+  - tests/helpers.go
+  - models/sdkerrors/sdkerror.go
+  - types/bigint.go
+  - types/date.go
+  - types/datetime.go
+  - types/decimal.go
+  - types/pointers.go
+  - internal/utils/contenttype.go
+  - internal/utils/form.go
+  - internal/utils/headers.go
+  - internal/utils/json.go
+  - internal/utils/pathparams.go
+  - internal/utils/queryparams.go
+  - internal/utils/requestbody.go
+  - internal/utils/retries.go
+  - internal/utils/security.go
+  - internal/utils/utils.go
+  - /models/operations/listpets.go
+  - /models/operations/createpets.go
+  - /models/operations/showpetbyid.go
+  - /models/components/error.go
+  - /models/components/pet.go
+  - docs/models/operations/listpetsrequest.md
+  - docs/models/operations/listpetsresponse.md
+  - docs/models/operations/createpetsresponse.md
+  - docs/models/operations/showpetbyidrequest.md
+  - docs/models/operations/showpetbyidresponse.md
+  - docs/models/components/error.md
+  - docs/models/components/pet.md
+  - USAGE.md
+  - .gitattributes
