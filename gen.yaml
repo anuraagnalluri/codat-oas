@@ -6,11 +6,12 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
   baseServerURL: ""
   flattenGlobalSecurity: true
   telemetryEnabled: false
 go:
-  version: 0.2.2
+  version: 0.3.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
