@@ -11,7 +11,7 @@ import (
 func main() {
 	s := codatoas.New()
 
-	var limit *int = 21453
+	var limit *int = codatoas.Int(21453)
 
 	ctx := context.Background()
 	res, err := s.Pets.ListPets(ctx, limit)
