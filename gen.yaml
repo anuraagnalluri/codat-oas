@@ -14,7 +14,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 go:
-  version: 0.4.2
+  version: 0.5.0
   additionalDependencies: {}
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
@@ -30,6 +30,7 @@ go:
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: github.com/anuraagnalluri/codat-oas
+  responseFormat: envelope
 java:
   version: 0.0.1
   artifactID: test
