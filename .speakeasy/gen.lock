@@ -3,17 +3,17 @@ id: 3bcbe03c-bc65-49ca-8c8d-02e32a18f282
 management:
   docChecksum: 09467363775cd29b9b6f87710c2a5d57
   docVersion: 1.0.0
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 0.5.1
-  configChecksum: f3f4cc4f12739e208cf1ea27e449490a
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 0.5.2
+  configChecksum: 8349e65767e0fb63ccf36090b5c026de
   repoURL: https://github.com/anuraagnalluri/codat-oas.git
   repoSubDirectory: .
   installationURL: https://github.com/anuraagnalluri/codat-oas
   published: true
 features:
   go:
-    core: 3.4.4
+    core: 3.4.5
     flattening: 2.81.1
     globalServerURLs: 2.82.2
     responseFormat: 0.1.0
