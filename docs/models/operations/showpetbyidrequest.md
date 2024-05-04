@@ -3,6 +3,6 @@
 
 ## Fields
 
-| Field                         | Type                          | Required                      | Description                   |
-| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| `PetID`                       | *string*                      | :heavy_check_mark:            | The id of the pet to retrieve |
+| Field                         | Type                          | Required                      | Description                   | Example                       |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `PetID`                       | *string*                      | :heavy_check_mark:            | The id of the pet to retrieve | dog                           |
