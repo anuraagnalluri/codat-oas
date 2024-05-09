@@ -3,20 +3,24 @@ id: 3bcbe03c-bc65-49ca-8c8d-02e32a18f282
 management:
   docChecksum: 09467363775cd29b9b6f87710c2a5d57
   docVersion: 1.0.0
-  speakeasyVersion: 1.279.0
-  generationVersion: 2.322.5
-  releaseVersion: 0.5.5
-  configChecksum: 6b25878abe09e5641ed3597fa801cf05
+  speakeasyVersion: 1.285.1
+  generationVersion: 2.326.3
+  releaseVersion: 0.6.0
+  configChecksum: 110717cf6f59e783f4913803edb075d6
   repoURL: https://github.com/anuraagnalluri/codat-oas.git
   repoSubDirectory: .
   installationURL: https://github.com/anuraagnalluri/codat-oas
   published: true
 features:
   go:
+    additionalDependencies: 0.1.0
     core: 3.4.7
     flattening: 2.81.1
+    globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.2
+    intellisenseMarkdownSupport: 0.1.0
     responseFormat: 0.1.1
+    sdkHooks: 0.1.0
 generatedFiles:
   - pets.go
   - test.go

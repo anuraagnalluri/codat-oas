@@ -14,7 +14,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 go:
-  version: 0.5.5
+  version: 0.6.0
   additionalDependencies: {}
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
@@ -28,6 +28,7 @@ go:
       webhooks: models/webhooks
   inputModelSuffix: input
   maxMethodParams: 4
+  methodArguments: require-security-and-request
   outputModelSuffix: output
   packageName: github.com/anuraagnalluri/codat-oas
   responseFormat: envelope
