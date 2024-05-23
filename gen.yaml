@@ -14,7 +14,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 go:
-  version: 0.6.2
+  version: 0.6.3
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true

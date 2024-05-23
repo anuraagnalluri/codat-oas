@@ -56,9 +56,7 @@ import (
 
 func main() {
 	s := codatoas.New()
-
 	var limit *int = codatoas.Int(50)
-
 	ctx := context.Background()
 	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
@@ -102,9 +100,7 @@ func main() {
 	s := codatoas.New(
 		codatoas.WithServerIndex(0),
 	)
-
 	var limit *int = codatoas.Int(50)
-
 	ctx := context.Background()
 	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
@@ -134,9 +130,7 @@ func main() {
 	s := codatoas.New(
 		codatoas.WithServerURL("http://petstore.swagger.io/v1"),
 	)
-
 	var limit *int = codatoas.Int(50)
-
 	ctx := context.Background()
 	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {

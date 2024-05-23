@@ -10,9 +10,7 @@ import (
 
 func main() {
 	s := codatoas.New()
-
 	var limit *int = codatoas.Int(50)
-
 	ctx := context.Background()
 	res, err := s.Pets.ListPets(ctx, limit)
 	if err != nil {
