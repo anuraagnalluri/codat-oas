@@ -229,3 +229,13 @@ Based on:
 - [go v0.6.3] .
 ### Releases
 - [Go v0.6.3] https://github.com/anuraagnalluri/codat-oas/releases/tag/v0.6.3 - .
+
+## 2024-06-04 00:19:38
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.299.6 (2.338.12) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.6.4] .
+### Releases
+- [Go v0.6.4] https://github.com/anuraagnalluri/codat-oas/releases/tag/v0.6.4 - .
